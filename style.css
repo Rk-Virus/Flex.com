@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: azure;
+}
+
+/* header styling here  */
+header{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(214, 129, 18, 0.658);
+    padding: 0px 10px;
+}
+header li{
+    list-style-type: none;
+    margin: 5px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    padding: 5px;
+}
+header a:hover{
+    box-shadow: 1px 1px 4px black;
+    background-color: inherit;
+}
+
+.main-nav ul,.social-nav ul{
+    display: flex;
+    margin: 10px auto;
+}
+
+.social-nav img{
+    height: 30px;
+    width: 30px;
+    background-position: center center;
+}
+/* header styling ends here  */
+
+/* main styling starts here  */
+.main{
+    display: flex;
+    background-color: transparent;
+    flex-flow: row nowrap;
+    /* background-color: cyan; */
+}
+aside{
+    flex: 1;
+    margin: 0px 4px;
+    background-color: cornsilk;
+    padding: 10px 0px 0px 10px;
+}
+aside li{
+    list-style-type: none;
+    font-size: large;
+    margin: 1em;
+}
+aside li::before{
+    content: "";
+    background-image: url("images/iconfinder_agile_developer_development_software_dev_devop_devops_4047373.png");
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+}
+
+.blog{
+    flex: 1;
+    flex-grow: 3;
+    background-color: beige;
+    margin: 0px 4px;
+
+    padding: 10px 0px 0px 10px;
+    box-shadow: -4px 2px 5px rgb(241, 215, 130) ;
+}
+
+.blog article{
+    margin-bottom: 2em;
+}
+
+.services{
+    margin: 20px 0px;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.card{
+    text-align: center;
+    width: 200px;
+    margin: 5px;
+    padding: 4px;
+
+    border: 3px dashed brown;
+    background-color: rgba(255, 184, 71, 0.308);
+    border-radius: 5px;
+}
+
+
+
+
+footer{
+    text-align: right;
+    background-color: rgb(71, 71, 71);
+    color: azure;
+    padding: 10px 20px;
+
+    /* position: static; */
+    /* bottom: 0px;
+    width: 100%; */
+}
+
+
+
+
+@media (max-width:688px){
+    header{
+        flex-flow: column wrap;
+    }
+    #logo{
+        order: -1;
+        margin-top: 15px;
+    }
+    .social-nav ul{
+        display: none;
+    }
+    .main{
+        flex-flow: column-reverse nowrap;
+    }
+    .services{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 60%;
+    }
+}
